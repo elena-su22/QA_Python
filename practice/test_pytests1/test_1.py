@@ -28,6 +28,7 @@ def test_regerrmail():
         driver.find_element(By.CSS_SELECTOR, '#email').send_keys('L')
         driver.find_element(By.CSS_SELECTOR, '#password').send_keys('Lena123!')
         driver.find_element(By.CSS_SELECTOR, '[type="submit"]').click()
+        assert driver.find_element(By.CSS_SELECTOR, '#success-message').text == 'Вы успешно зарегистрированы!', 'Почта в неверном формате'
         # with pytest.raises(NoSuchElementException):
         #     driver.find_element(By.CSS_SELECTOR, '#success-message').text
         #     pytest.fail('Не должно быть регистрации с неверным форматом почты') == 'Вы успешно зарегистрированы!'
