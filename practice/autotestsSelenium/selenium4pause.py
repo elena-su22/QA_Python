@@ -27,7 +27,7 @@ import re
 #     driver.quit()
 
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 #driver.implicitly_wait(5)
 
 try:
